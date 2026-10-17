@@ -5,17 +5,6 @@
 
 USE QuantigrationUpdates;
 
--- Rename Customers to Collaborators
--- to match the updated database requirements.
-
-RENAME TABLE Customers TO Collaborators;
-
-ALTER TABLE Collaborators
-CHANGE CustomerID CollaboratorID INT;
-
-ALTER TABLE Orders
-CHANGE CustomerID CollaboratorID INT;
-
 
 -- QUERY 1: Analyze returns by state
 -- Identify states with the highest number of returns.
